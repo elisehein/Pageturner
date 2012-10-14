@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<!-- START OF _layouts/page.html -->
+	{% if page.title %}
+			<h2>{{ page.title }}</h2>
+	{% endif %}
+	
+	{{ content }}
+	
+	{% include post/date.html %}
+<!-- END OF _layouts/page.html -->

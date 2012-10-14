@@ -1,0 +1,50 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title><![CDATA[{{ site.title }}]]></title>
+	<link href="{{ site.url }}/atom.xml" rel="self"/>
+	<link href="{{ site.url }}/"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>{{ site.url }}/</id>
+	<author>
+		<name><![CDATA[{{ site.author | strip_html }}]]></name>
+		{% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
+	</author>
+	<generator uri="http://octopress.org/">Octopress</generator>
+
+	{% for post in site.posts limit: 20 %}
+	<entry>
+		{% if post.type == "text" %}
+			<title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+		{% else %}
+			<title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+		{% endif %}
+		<link href="{{ site.url }}{{ post.url }}"/>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<id>{{ site.url }}{{ post.id }}</id>
+		<content type="html">
+			<![CDATA[
+				{% case post.type %}
+				{% when "photo" %}
+					<p><a href="{{ post.photo.url }}"><img src="{{ post.photo.url }}" /></a></p>
+				{% when "quote" %}
+					<blockquote>
+						{{ post.quote.quote }}
+						<p>&mdash;<cite>{{ post.quote.source }}</cite></p>
+					</blockquote>
+				{% when "link" %}
+					<p><a href="{{ post.link.url }}">{{ post.title }} &rarr;</a></p>
+				{% when "audio" %}
+					<p><a href="{{ post.audio.url }}">{{ post.title }}</a></p>
+				{% when "video %}
+					<p>{{ post.video.embed }}</p>
+				{% endcase %}
+			]]>
+			<![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]>
+		</content>
+	</entry>
+	{% endfor %}
+</feed>

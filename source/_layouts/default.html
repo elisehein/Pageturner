@@ -1,0 +1,31 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+<!doctype html>
+<!-- START OF _layouts/default.html -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" >
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<meta content="{{ site.description }}" name="description">
+		<meta content="{{ site.title }}" name="author">
+		
+		<title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title }}</title>
+		
+		<link href="{{ root_url }}/humans.txt" rel="author" type="text/plain">
+		<link href="{{ root_url }}/favicon.ico" rel="icon">
+
+		<!--<link href="{{ root_url }}/css/application.css" rel="stylesheet">-->
+		
+		<!--<link href="http://feeds.feedburner.com/turkeltaub" rel="alternate" title="{{ site.title }}" type="application/rss+xml" />-->
+		
+	</head>
+	<body>
+	
+		<div align=center><a href="{{ root_url }}/">Blog</a> | <a href="{{ root_url }}/blog/archives">Archives</a> | <a href="{{ root_url }}/authors">Authors</a></div>
+		<p>
+		
+		{{ content | expand_urls: root_url }}
+			
+	</body>
+</html>
+<!-- END OF _layouts/default.html -->

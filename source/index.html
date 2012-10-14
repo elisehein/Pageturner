@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<!-- START OF index.html -->
+{% assign index = true %}
+	{% for page in paginator.posts %}
+		{% assign content = page.content %}
+		{% include article.html %}
+	{% endfor %}
+	
+			{% if paginator.next_page %}
+				<span><a href="{{ paginator.next_page }}">&larr; Older</a></span>
+			{% endif %}
+			<p>{{ paginator.page }} <span>of</span> {{ paginator.total_pages }}</p>
+			
+			{% if paginator.previous_page %}
+				<span><a href="{{ paginator.previous_page }}">Newer &rarr;</a></span>
+			{% endif %}
+<!-- END OF index.html -->
