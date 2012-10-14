@@ -1,10 +1,60 @@
 @import "typography";
-@import "layout";
+@import "variables";
 
 body {
-	font-family: "SortsMillGoudyRegular";
+	margin: 0;
+	padding: 0;
+	border-top: $top-line-weight solid $black;
+	font-family: "Bookletter";
+	color: $black;
+	}
+	
+.wrap {
+	margin: 0 auto;
+	width: $content-width;
+	}
+
+header {
+	margin: $header-spacing 0;
+	text-align: center;
+	
+	.title {
+		font-family: $blog-title-font;
+		font-size: $blog-title-font-size;
+		
+		&:hover {
+			color: $main-color;
+			}
+		}
+	
+	.navi {
+		font-family: $navi-font;
+		font-size: $navi-font-size;
+		
+		ul {
+			margin: 0.5em 0 0 0;
+			padding: 0;
+			list-style: none;
+			
+			li {
+				display: inline-block;
+				margin: 0;
+				padding: 0 0.7em;
+				
+				a {
+					color: $black;
+					text-decoration: none;
+					
+					&:hover,
+					&:active{
+						color: $main-color;
+						}
+					}
+				} /* // li */
+			} /* // ul */
+		}
 	}
 	
 p {
-	font-family: "Fanwood";
+	font-family: "Bookletter";
 	}

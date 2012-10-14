@@ -22,11 +22,23 @@
 	</head>
 	<body>
 	
-		<div align=center><a href="{{ root_url }}/">Blog</a> | <a href="{{ root_url }}/blog/archives">Archives</a> | <a href="{{ root_url }}/authors">Authors</a></div>
-		<p>
+		<div class="wrap">
+	
+			<header>
+				<div class="title">{{ site.title }}</div>
+				
+				<div class="navi">
+					<ul>
+						<li><a href="{{ root_url }}/">Blog</a></li>
+						<li><a href="{{ root_url }}/blog/archives">Archives</a></li>
+						<li><a href="{{ root_url }}/authors">Authors</a></li>
+					<ul>
+				</div> <!-- // .navi -->
+			</header>
 		
 		{{ content | expand_urls: root_url }}
 			
+		</div> <!-- // .wrap -->
 	</body>
 </html>
 <!-- END OF _layouts/default.html -->
