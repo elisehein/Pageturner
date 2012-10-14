@@ -1,0 +1,26 @@
+$font-path: "../font/";
+
+@font-face {
+    font-family: 'SortsMillGoudyRegular';
+    src: url('#{$font-path}GoudyStM-webfont.eot');
+    src: url('#{$font-path}GoudyStM-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}GoudyStM-webfont.woff') format('woff'),
+         url('#{$font-path}GoudyStM-webfont.ttf') format('truetype'),
+         url('#{$font-path}GoudyStM-webfont.svg#SortsMillGoudyRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SortsMillGoudyItalic';
+    src: url('#{$font-path}GoudyStM-Italic-webfont.eot');
+    src: url('#{$font-path}GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}GoudyStM-Italic-webfont.woff') format('woff'),
+         url('#{$font-path}GoudyStM-Italic-webfont.ttf') format('truetype'),
+         url('#{$font-path}GoudyStM-Italic-webfont.svg#SortsMillGoudyItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
