@@ -24,3 +24,10 @@ $font-path: "../font/";
 
 }
 
+@font-face {
+    font-family: 'MuseoSans-500';
+	  src: url('#{$font-path}/MuseoSans.eot');
+	  src: url('#{$font-path}/MuseoSans.eot?#iefix') format('embedded-opentype'),
+	       url('#{$font-path}/MuseoSans.woff') format('woff'),
+			   url('#{$font-path}/MuseoSans.ttf') format('truetype');
+			 }
