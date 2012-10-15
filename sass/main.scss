@@ -1,3 +1,4 @@
+@import "bourbon/bourbon";
 @import "typography";
 @import "variables";
 
@@ -22,6 +23,7 @@ header {
 		font-family: $blog-title-font;
 		font-size: $blog-title-font-size;
 		text-transform: $blog-title-text-transform;
+		letter-spacing: $blog-title-letter-spacing;
 		
 		&:hover {
 			color: $main-color;
@@ -33,12 +35,12 @@ header {
 		font-size: $navi-font-size;
 		
 		ul {
-			margin: 0.5em 0 0 0;
+			margin: ($navi-link-spacing/2 * 1em) 0 0 0;
 			padding: 0;
 			list-style: none;
 			
 			li {
-				display: inline-block;
+				@include inline-block;
 				margin: 0;
 				padding: 0 0.7em;
 				
@@ -56,6 +58,34 @@ header {
 		}
 	}
 	
-p {
-	font-family: "Bookletter";
+article {
+	font-family: $post-font;
+	font-size: $post-font-size;
+	
+	a {
+		color: $main-color;
+		text-decoration: none;
+		
+		&:hover {
+			color: $black;
+			}
+		}
+		
+	h1 {
+		font-size: $post-title-font-size;		
+		font-weight: $post-title-font-weight;
+		
+		a {
+			color: $black;
+			
+			&:hover {
+				color: $main-color;
+				}
+			}
+		}
+		
+	header {
+		margin: 0 0 1em;
+		text-align: center;
+		}
 	}

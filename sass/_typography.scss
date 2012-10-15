@@ -1,88 +1,10 @@
 $font-path: "../font/";
 
-@font-face {
-    font-family: 'SortsMillGoudyRegular';
-    src: url('#{$font-path}GoudyStM-webfont.eot');
-    src: url('#{$font-path}GoudyStM-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}GoudyStM-webfont.woff') format('woff'),
-         url('#{$font-path}GoudyStM-webfont.ttf') format('truetype'),
-         url('#{$font-path}GoudyStM-webfont.svg#SortsMillGoudyRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SortsMillGoudyItalic';
-    src: url('#{$font-path}GoudyStM-Italic-webfont.eot');
-    src: url('#{$font-path}GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}GoudyStM-Italic-webfont.woff') format('woff'),
-         url('#{$font-path}GoudyStM-Italic-webfont.ttf') format('truetype'),
-         url('#{$font-path}GoudyStM-Italic-webfont.svg#SortsMillGoudyItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MuseoSans';
-	  src: url('#{$font-path}/MuseoSans.eot');
-	  src: url('#{$font-path}/MuseoSans.eot?#iefix') format('embedded-opentype'),
-	       url('#{$font-path}/MuseoSans.woff') format('woff'),
-			   url('#{$font-path}/MuseoSans.ttf') format('truetype');
-			 }
-			 
-@font-face {
-    font-family: 'SofiaProLight';
-    src: url('#{$font-path}SofiaProLight-webfont.eot');
-    src: url('#{$font-path}SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}SofiaProLight-webfont.woff') format('woff'),
-         url('#{$font-path}SofiaProLight-webfont.ttf') format('truetype'),
-         url('#{$font-path}SofiaProLight-webfont.svg#SofiaProLightRegular') format('svg');
-    font-weigh#{$font-path}t: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Bookletter';
-    src: url('#{$font-path}goudy_bookletter_1911-webfont.eot');
-    src: url('#{$font-path}goudy_bookletter_1911-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}goudy_bookletter_1911-webfont.woff') format('woff'),
-         url('#{$font-path}goudy_bookletter_1911-webfont.ttf') format('truetype'),
-         url('#{$font-path}goudy_bookletter_1911-webfont.svg#Bookletter') format('svg');
-    font-weigh#{$font-path}t: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'governor';
-    src: url('#{$font-path}governor-webfont.eot');
-    src: url('#{$font-path}governor-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}governor-webfont.woff') format('woff'),
-         url('#{$font-path}governor-webfont.ttf') format('truetype'),
-         url('#{$font-path}governor-webfont.svg#governorregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'nevis';
-    src: url('#{$font-path}nevis-webfont.eot');
-    src: url('#{$font-path}nevis-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}nevis-webfont.woff') format('woff'),
-         url('#{$font-path}nevis-webfont.ttf') format('truetype'),
-         url('#{$font-path}nevis-webfont.svg#webfontbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CallunaRegular';
-    src: url('#{$font-path}Calluna-Regular-webfont.eot');
-    src: url('#{$font-path}Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('#{$font-path}Calluna-Regular-webfont.woff') format('woff'),
-         url('#{$font-path}Calluna-Regular-webfont.ttf') format('truetype'),
-         url('#{$font-path}Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
+@include font-face('sorts-mill-goudy', '#{$font-path}GoudyStM-webfont');
+@include font-face('sorts-mill-goudy-italic', '#{$font-path}GoudyStM-Italic-webfont');
+@include font-face('museo-sans', '#{$font-path}MuseoSans');
+@include font-face('sofia-pro-light', '#{$font-path}SofiaProLight-webfont');
+@include font-face('bookletter', '#{$font-path}goudy_bookletter_1911-webfont');
+@include font-face('governor', '#{$font-path}governor-webfont');
+@include font-face('nevis', '#{$font-path}nevis-webfont');
+@include font-face('calluna-regular', '#{$font-path}Calluna-Regular-webfont');
