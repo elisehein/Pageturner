@@ -73,3 +73,16 @@ $font-path: "../font/";
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('#{$font-path}Calluna-Regular-webfont.eot');
+    src: url('#{$font-path}Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}Calluna-Regular-webfont.woff') format('woff'),
+         url('#{$font-path}Calluna-Regular-webfont.ttf') format('truetype'),
+         url('#{$font-path}Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
