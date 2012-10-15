@@ -35,14 +35,14 @@ header {
 		font-size: $navi-font-size;
 		
 		ul {
-			margin: ($navi-link-spacing/2 * 1em) 0 0 0;
+			margin: 0.4em 0 0 0;
 			padding: 0;
 			list-style: none;
 			
 			li {
 				@include inline-block;
 				margin: 0;
-				padding: 0 0.7em;
+				padding: 0 ($navi-link-spacing/2 * 1em);
 				
 				a {
 					color: $black;
@@ -60,7 +60,7 @@ header {
 	
 article {
 	font-family: $post-font;
-	font-size: $post-font-size;
+	text-align: justify;
 	
 	a {
 		color: $main-color;
@@ -71,10 +71,17 @@ article {
 			}
 		}
 		
-	h1 {
-		font-size: $post-title-font-size;		
-		font-weight: $post-title-font-weight;
+	code {
+		font-family: $code-font-family;
+		font-size: $code-font-size;
+		margin: $code-margin 0;
+		padding: $code-padding;
+		border: 1px solid $code-border-color;
+		@include border-radius($code-border-radius);
+		background: $code-background-color;
+		}
 		
+	h1, h2, h3 {
 		a {
 			color: $black;
 			
@@ -84,8 +91,56 @@ article {
 			}
 		}
 		
+	h1 {
+		margin-top: $heading-top-spacing;
+		font-size: $heading-font-size;
+		font-weight: $heading-font-weight;
+		letter-spacing: $heading-letter-spacing;
+		font-style: $heading-font-style;
+		}
+		
+	h2 {
+		margin-top: $subheading-top-spacing;
+		font-size: $subheading-font-size;
+		font-weight: $subheading-font-weight;
+		letter-spacing: $subheading-letter-spacing;
+		font-style: $subheading-font-style;
+		}
+		
 	header {
-		margin: 0 0 1em;
+		margin: 0 0 $post-content-top-space 0;
+		padding-top: ($space-between-posts/2*1em);
+		border-top: 1px solid $light-gray;
 		text-align: center;
+		
+		h1 {
+			font-size: $post-title-font-size;		
+			font-weight: $post-title-font-weight;
+			letter-spacing: $post-title-letter-spacing;
+			font-style: $post-title-font-style;
+			}
+		}
+		
+	hr {
+		margin: $hr-spacing !important;
+		border: none;
+		height: 1px;
+		color: $light-gray;
+		background-color: $light-gray;
+		}
+		
+	footer {
+		margin: $post-content-bottom-space 0 ($space-between-posts/2*1em) 0;
+		}
+		
+	p {
+		font-size: $post-font-size;
+		line-height: $post-font-line-height;
+		}
+		
+	pre {
+		code {
+			line-height: $code-block-line-height;
+			}
 		}
 	}

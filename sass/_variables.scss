@@ -3,18 +3,72 @@ $main-color: red;
 
 $white: #fff;
 $light-gray: #dfdfdf;
+$light-light-gray: #f8f8f8;
+$gray: #b0b0b0;
 $black: #333;
 
 /* Layout */
-$content-width: 40%;
-$header-spacing: 150px;    /* Space above and below the header section */
-$top-line-weight: 6px;     /* Weight of the line at the top of the page */
 
-/* Fonts */
+/* Width of the content area */
+$content-width: 40%;
+
+/* Space above and below the header section */
+$header-spacing: 150px; 
+
+/* Weight of the line at the top of the page */
+$top-line-weight: 8px;     
+
+/* Space between header links (this will be in ems) */
+$navi-link-spacing: 0.8;     
+
+/* Space between the date and the post */
+$post-content-top-space: 3em;
+
+/* Space between the post and the author/tags */
+$post-content-bottom-space: 2em; 
+
+/* Space between posts in ems */
+$space-between-posts: 8;
+
+/* Space before and after a <hr> */
+$hr-spacing: 4em;
+
+/* Typography */
 $blog-title-font: 'nevis';
 $blog-title-font-size: 2.3em;
-$blog-title-letter-spacing: 0.09em;
+$blog-title-letter-spacing: 0.02em;
 $blog-title-text-transform: uppercase;
 
-$navi-font: 'Fanwood';
-$navi-font-size: 1.1em;
+$navi-font: 'calluna-regular';
+$navi-font-size: 1.15em;
+
+$post-font: 'calluna-regular';
+$post-font-size: 1.1em;
+$post-font-line-height: 1.7em;
+
+$post-title-font-size: 1.8em;
+$post-title-font-weight: normal;
+$post-title-letter-spacing: 0.04em;
+$post-title-font-style: normal;
+
+$heading-font-size: 1.6em;
+$heading-font-weight: normal;
+$heading-letter-spacing: none;
+$heading-font-style: normal;
+$heading-top-spacing: 2em;
+
+$subheading-font-size: 1.1em;
+$subheading-font-weight: bold;
+$subheading-letter-spacing: none;
+$subheading-font-style: normal;
+$subheading-top-spacing: 2em;
+
+$code-font-family: "Cousine";
+$code-font-size: 0.75em;
+$code-padding: 0.4em;
+$code-margin: 0.4em;
+$code-border-radius: 3px;
+$code-border-color: $gray;
+$code-background-color: $light-light-gray;
+
+$code-block-line-height: 1.8em;
