@@ -1,8 +1,8 @@
 <!-- START OF _includes/article.html -->
 <a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a>
 	{{ content }}
-	<!--	<p> Tags: {{ page.categories }} -->
-	<p>{% include post/date.html %}{{ time }}</p>
 	<p>{% include post/categories.html %}</p>
+	<p>{% include post/date.html %}{{ time }}</p>
+	<p>Author: {% if page.author %}{{ page.author }}{% endif %}</p>
 	{% if page.source.url %}<p>via <a href="{{ page.source.url }}">{{ page.source.title }}</a></p>{% endif %}
 <!-- END OF _includes/article.html -->
