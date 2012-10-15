@@ -2,7 +2,7 @@
 <article>
 	<header>
 		<h1><a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a></h1>
-		{% include post/date.html %}{{ time }}
+		<time>{{ page.date | date: "%d %B %Y" }}</time>
 	</header>
 	{{ content }}
 	<footer>

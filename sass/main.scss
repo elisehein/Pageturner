@@ -24,10 +24,6 @@ header {
 		font-size: $blog-title-font-size;
 		text-transform: $blog-title-text-transform;
 		letter-spacing: $blog-title-letter-spacing;
-		
-		&:hover {
-			color: $main-color;
-			}
 		}
 	
 	.navi {
@@ -79,6 +75,10 @@ article {
 		border: 1px solid $code-border-color;
 		@include border-radius($code-border-radius);
 		background: $code-background-color;
+		}
+		
+	time {
+		font-size: $date-font-size;
 		}
 		
 	h1, h2, h3 {
