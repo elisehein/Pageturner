@@ -9,7 +9,6 @@ $font-path: "../font/";
          url('#{$font-path}GoudyStM-webfont.svg#SortsMillGoudyRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -21,7 +20,6 @@ $font-path: "../font/";
          url('#{$font-path}GoudyStM-Italic-webfont.svg#SortsMillGoudyItalic') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -41,7 +39,6 @@ $font-path: "../font/";
          url('#{$font-path}SofiaProLight-webfont.svg#SofiaProLightRegular') format('svg');
     font-weigh#{$font-path}t: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -53,7 +50,6 @@ $font-path: "../font/";
          url('#{$font-path}goudy_bookletter_1911-webfont.svg#Bookletter') format('svg');
     font-weigh#{$font-path}t: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -65,5 +61,15 @@ $font-path: "../font/";
          url('#{$font-path}governor-webfont.svg#governorregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'nevis';
+    src: url('#{$font-path}nevis-webfont.eot');
+    src: url('#{$font-path}nevis-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-path}nevis-webfont.woff') format('woff'),
+         url('#{$font-path}nevis-webfont.ttf') format('truetype'),
+         url('#{$font-path}nevis-webfont.svg#webfontbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
