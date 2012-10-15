@@ -21,6 +21,7 @@ header {
 	.title {
 		font-family: $blog-title-font;
 		font-size: $blog-title-font-size;
+		text-transform: $blog-title-text-transform;
 		
 		&:hover {
 			color: $main-color;
