@@ -44,11 +44,19 @@
 			
 		</div> <!-- // .wrap -->
 	</body>
-	<!-- Wrap the words on the first line of each article in spans -->
 	<script>
 		$(document).ready(function() {
+			// Wrap the words on the first line of each article in spans
 		  $("article .content p:first-child").lettering('words');
 			});
-			</script>
+			
+			// Make images center
+			$('p:has(img)').css('text-align', 'center');
+			
+			// Add the image's title attribute as a caption
+			$('p:has(img)').append(function () {
+				return '<div class="caption">' + $('img', this).attr('title') + '</div>';
+			});
+	</script>
 </html>
 <!-- END OF _layouts/default.html -->

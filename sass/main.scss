@@ -138,10 +138,19 @@ article {
 		}
 		
 	p {
+		.caption {
+			font-size: $caption-font-size;
+			}
+			
 		.word1,
 		.word2,
 		.word3 {
 			font-variant: small-caps;
+			}
+			
+		img {
+			padding: 4px;
+			@include box-shadow(0 0 0px 1px $gray);
 			}
 		}
 		
