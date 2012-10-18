@@ -37,12 +37,14 @@ $tags-spacing: 2em;
 $hr-spacing: 4em;
 
 /* Typography */
+$body-font: 'sorts-mill-goudy';
+
 $blog-title-font: 'nevis';
 $blog-title-font-size: 2.3em;
 $blog-title-letter-spacing: 0.02em;
 $blog-title-text-transform: uppercase;
 
-$navi-font: 'calluna-regular';
+$navi-font: 'sorts-mill-goudy';
 $navi-font-size: 1.15em;
 
 $post-font: 'sorts-mill-goudy';
@@ -83,3 +85,6 @@ $code-background-color: $white;
 $code-block-line-height: 1.8em;
 
 $caption-font-size: 0.9em;
+
+$paginator-font-family: 'nevis';
+$paginator-font-size: 2em;

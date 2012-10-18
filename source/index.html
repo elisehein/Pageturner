@@ -9,12 +9,15 @@ layout: default
 		{% include article.html %}
 	{% endfor %}
 	
-			{% if paginator.next_page %}
-				<span><a href="{{ paginator.next_page }}">&larr; Older</a></span>
-			{% endif %}
-			<p>{{ paginator.page }} <span>of</span> {{ paginator.total_pages }}</p>
-			
-			{% if paginator.previous_page %}
-				<span><a href="{{ paginator.previous_page }}">Newer &rarr;</a></span>
-			{% endif %}
+<div class="pagination">
+	{% if paginator.next_page %}
+		<a class="older" href="{{ paginator.next_page }}">Older</a>
+	{% endif %}
+	
+	<span class="total">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+	
+	{% if paginator.previous_page %}
+		<a class="newer" href="{{ paginator.previous_page }}">Newer</a>
+	{% endif %}
+</div>
 <!-- END OF index.html -->

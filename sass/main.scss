@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	border-top: $top-line-weight solid $black;
-	font-family: "Bookletter";
+	font-family: $body-font;
 	color: $black;
 	}
 	
@@ -176,5 +176,40 @@ pre {
 		right: 1em;
 		font-size: 0.8em;
 		text-decoration: underline;
+		}
+	}
+	
+.pagination {
+	position: relative;
+	margin: 5em 0;
+	
+	a {
+		font-family: $paginator-font-family;
+		font-size: $paginator-font-size;
+		color: $black;
+		text-decoration: none;
+		
+		&:hover {
+			color: $main-color;
+			}
+		}
+		
+	.newer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		}
+		
+	.older {
+		position: absolute;
+		top: 0;
+		left: 0;
+		}
+	
+	span {
+		display: block;
+		width: 100%;
+		padding-top: 0.5em;
+		text-align: center;
 		}
 	}
