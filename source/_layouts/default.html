@@ -18,6 +18,9 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cousine">
 		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="{{ root_url }}/js/jquery.lettering-0.6.min.js"></script>
+		
 		<!--<link href="http://feeds.feedburner.com/turkeltaub" rel="alternate" title="{{ site.title }}" type="application/rss+xml" />-->
 		
 	</head>
@@ -41,5 +44,11 @@
 			
 		</div> <!-- // .wrap -->
 	</body>
+	<!-- Wrap the words on the first line of each article in spans -->
+	<script>
+		$(document).ready(function() {
+		  $("article .content p:first-child").lettering('words');
+			});
+			</script>
 </html>
 <!-- END OF _layouts/default.html -->

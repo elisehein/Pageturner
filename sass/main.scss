@@ -136,6 +136,12 @@ article {
 	p {
 		font-size: $post-font-size;
 		line-height: $post-font-line-height;
+		
+		.word1,
+		.word2,
+		.word3 {
+			font-variant: small-caps;
+			}
 		}
 		
 	pre {
