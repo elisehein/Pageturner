@@ -56,6 +56,9 @@ header {
 	
 article {
 	font-family: $post-font;
+	font-size: $post-font-size;
+	line-height: $post-font-line-height;
+		
 	text-align: justify;
 	
 	a {
@@ -116,8 +119,9 @@ article {
 		h1 {
 			font-size: $post-title-font-size;		
 			font-weight: $post-title-font-weight;
-			letter-spacing: $post-title-letter-spacing;
 			font-style: $post-title-font-style;
+			line-height: $post-title-line-height;
+			letter-spacing: $post-title-letter-spacing;
 			}
 		}
 		
@@ -134,9 +138,6 @@ article {
 		}
 		
 	p {
-		font-size: $post-font-size;
-		line-height: $post-font-line-height;
-		
 		.word1,
 		.word2,
 		.word3 {
