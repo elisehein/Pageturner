@@ -70,14 +70,8 @@ article {
 			}
 		}
 		
-	code {
-		font-family: $code-font-family;
-		font-size: $code-font-size;
-		margin: $code-margin 0;
-		padding: $code-padding;
-		border: 1px solid $code-border-color;
-		@include border-radius($code-border-radius);
-		background: $code-background-color;
+	.content {
+		border-bottom: 1px solid $light-gray;
 		}
 		
 	time {
@@ -134,7 +128,7 @@ article {
 		}
 		
 	footer {
-		margin: $post-content-bottom-space 0 ($space-between-posts/2*1em) 0;
+		margin: $post-content-bottom-space 0 $tags-spacing 0;
 		}
 		
 	p {
@@ -149,14 +143,38 @@ article {
 			}
 			
 		img {
+			max-width: 100%;
 			padding: 4px;
 			@include box-shadow(0 0 0px 1px $gray);
 			}
 		}
-		
-	pre {
-		code {
-			line-height: $code-block-line-height;
-			}
+	}
+	
+code {
+	font-family: $code-font-family;
+	font-size: $code-font-size;
+	margin: $code-margin 0;
+	padding: $code-padding;
+	}
+	
+p > code {
+	border: 1px solid $light-gray;
+	@include border-radius(4px);
+	background-color: $code-background-color;
+	}
+
+pre {
+	position: relative;
+	border: 1px solid $light-gray;
+	@include border-radius(4px);
+	line-height: $code-block-line-height;
+	background-color: $code-background-color;
+	
+	.clip-btn {
+		position: absolute;
+		top: 0px;
+		right: 1em;
+		font-size: 0.8em;
+		text-decoration: underline;
 		}
 	}

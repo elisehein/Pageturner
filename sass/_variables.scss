@@ -30,6 +30,9 @@ $post-content-bottom-space: 2em;
 /* Space between posts in ems */
 $space-between-posts: 8;
 
+/* Author tags top and bottom spacing */
+$tags-spacing: 2em;
+
 /* Space before and after a <hr> */
 $hr-spacing: 4em;
 
@@ -75,7 +78,7 @@ $code-padding: 0.4em;
 $code-margin: 0.4em;
 $code-border-radius: 3px;
 $code-border-color: $gray;
-$code-background-color: $light-light-gray;
+$code-background-color: $white;
 
 $code-block-line-height: 1.8em;
 

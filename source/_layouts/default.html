@@ -14,17 +14,26 @@
 		<link href="{{ root_url }}/humans.txt" rel="author" type="text/plain">
 		<link href="{{ root_url }}/favicon.ico" rel="icon">
 
+		<!-- Styles -->
 		<link href="{{ root_url }}/stylesheets/main.css" rel="stylesheet">
+		
+		<!-- Google webfonts -->
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cousine">
 		
+		<!-- jQuery and plugins -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="{{ root_url }}/js/jquery.lettering-0.6.min.js"></script>
+		<script src="{{ root_url }}/js/jquery.zclip.min.js"></script>
+		
+		<!-- Syntax highlighter -->
+		<link href="{{ root_url }}/stylesheets/prettify-hemisu.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="{{ root_url }}/js/prettify.js"></script>
 		
 		<!--<link href="http://feeds.feedburner.com/turkeltaub" rel="alternate" title="{{ site.title }}" type="application/rss+xml" />-->
 		
 	</head>
-	<body>
+	<body onload="prettyPrint()">
 	
 		<div class="wrap">
 	
@@ -56,6 +65,22 @@
 			// Add the image's title attribute as a caption
 			$('p:has(img)').append(function () {
 				return '<div class="caption">' + $('img', this).attr('title') + '</div>';
+			});
+			
+			// Prettify code
+			$('code').addClass('prettyprint');
+			$('pre code').addClass('linenums');
+			
+			// Copy to clipboard with button
+			$('pre:has(code)').prepend(function(){
+				return '<div class="clip-btn">copy to clipboard</div>';
+			});
+			$('.clip-btn').zclip({
+				path:'{{ root_url }}/js/ZeroClipboard.swf',
+				copy: $(this).next('code').text(),
+				afterCopy: function(){
+					$(this).replaceWith('<div class="clip-btn">copied!</div>');
+					}
 			});
 	</script>
 </html>
