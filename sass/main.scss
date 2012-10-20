@@ -10,13 +10,31 @@ body {
 	color: $black;
 	}
 	
+h1 {
+	margin-top: $heading-top-spacing;
+	font-size: $heading-font-size;
+	font-weight: $heading-font-weight;
+	letter-spacing: $heading-letter-spacing;
+	font-style: $heading-font-style;
+	}
+	
+h2 {
+	margin-top: $subheading-top-spacing;
+	font-size: $subheading-font-size;
+	font-weight: $subheading-font-weight;
+	letter-spacing: $subheading-letter-spacing;
+	font-style: $subheading-font-style;
+	}
+		
 .wrap {
 	margin: 0 auto;
 	width: $content-width;
 	}
 
 header {
-	margin: $header-spacing 0;
+	margin-bottom: $space-between-posts/2*1em;
+	padding: $header-spacing 0;
+	border-bottom: 1px solid $light-gray;
 	text-align: center;
 	
 	.title {
@@ -55,10 +73,12 @@ header {
 	}
 	
 article {
+	margin-bottom: $space-between-posts*1em;
+	padding: 0;
+	border-bottom: 1px solid $light-gray;
 	font-family: $post-font;
 	font-size: $post-font-size;
 	line-height: $post-font-line-height;
-		
 	text-align: justify;
 	
 	a {
@@ -88,26 +108,10 @@ article {
 			}
 		}
 		
-	h1 {
-		margin-top: $heading-top-spacing;
-		font-size: $heading-font-size;
-		font-weight: $heading-font-weight;
-		letter-spacing: $heading-letter-spacing;
-		font-style: $heading-font-style;
-		}
-		
-	h2 {
-		margin-top: $subheading-top-spacing;
-		font-size: $subheading-font-size;
-		font-weight: $subheading-font-weight;
-		letter-spacing: $subheading-letter-spacing;
-		font-style: $subheading-font-style;
-		}
-		
 	header {
 		margin: 0 0 $post-content-top-space 0;
-		padding-top: ($space-between-posts/2*1em);
-		border-top: 1px solid $light-gray;
+		padding: 0;
+		border: 0px;
 		text-align: center;
 		
 		h1 {
@@ -151,16 +155,17 @@ article {
 	}
 	
 code {
-	font-family: $code-font-family;
-	font-size: $code-font-size;
 	margin: $code-margin 0;
 	padding: $code-padding;
+	font-family: $code-font-family;
+	font-size: $code-font-size;
 	}
 	
 p > code {
 	border: 1px solid $light-gray;
 	@include border-radius(4px);
 	background-color: $code-background-color;
+	white-space: nowrap;
 	}
 
 pre {
@@ -209,7 +214,6 @@ pre {
 	span {
 		display: block;
 		width: 100%;
-		padding-top: 0.5em;
 		text-align: center;
 		}
 	}
