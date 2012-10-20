@@ -4,16 +4,23 @@ footer: false
 ---
 
 <!-- BEGIN _layouts/category_index.html -->
-<div id="blog-archives" class="category">
 {% for post in site.categories[page.category] %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+
 {% unless year == this_year %}
   {% assign year = this_year %}
-  <h2>{{ year }}</h2>
+	<div class="cat-year">{{ year }}</div>
 {% endunless %}
-<article>
-  {% include archive_post.html %}
-</article>
+
+{% unless month == this_month %}
+  {% assign month = this_month %}
+	<div class="cat-month">{{ month }}</div>
+{% endunless %}
+
+{% include archive_post.html %}
 {% endfor %}
+
+{{ category_list }}
 </div>
 <!-- _layouts/category_index.html -->
