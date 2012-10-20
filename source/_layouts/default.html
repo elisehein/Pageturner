@@ -46,7 +46,11 @@
 				</div> <!-- // .navi -->
 			</header>
 		
-		{{ content | expand_urls: root_url }}
+				{{ content | expand_urls: root_url }}
+		
+			<footer>
+				{% include footer.html %}
+			</footer>
 			
 		</div> <!-- // .wrap -->
 	</body>
