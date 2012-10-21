@@ -3,6 +3,21 @@
 @import "variables";
 @import "responsive";
 
+*::selection {
+	background: $main-color;
+	color: $white;
+	}
+
+*::-moz-selection {
+	background: $main-color;
+	color: $white;
+	}
+
+*::-webkit-selection {
+	background: $main-color;
+	color: $white;
+	}
+	
 body {
 	margin: 0;
 	padding: 0;
