@@ -11,15 +11,17 @@ body {
 	color: $black;
 	}
 	
+em {
+	font-style: normal;
+	font-family: $body-font-italic;
+	}
+	
 h1 {
 	margin-top: $heading-top-spacing;
 	font-size: $heading-font-size;
 	font-weight: $heading-font-weight;
 	font-style: $heading-font-style;
-	
-	&.center {
-		text-align: center;
-		}
+	text-align: $page-title-align;
 	}
 	
 h2 {
@@ -32,8 +34,18 @@ h2 {
 .wrap {
 	margin: 0 auto;
 	width: $content-width;
+	
+	/* blog footer */
+	& > footer {
+		margin-top: 2em;
+		padding: 2em 0;
+		border-top: 1px solid $light-gray;
+		text-align: center;
+		font-size: 0.8em;
+		}
 	}
 
+/* The main blog header */
 header {
 	margin-bottom: $space-between-posts/2*1em;
 	padding: $header-spacing 0;
@@ -44,7 +56,6 @@ header {
 		font-family: $blog-title-font;
 		font-size: $blog-title-font-size;
 		text-transform: $blog-title-text-transform;
-		letter-spacing: $blog-title-letter-spacing;
 		}
 	
 	.navi {
@@ -52,7 +63,7 @@ header {
 		font-size: $navi-font-size;
 		
 		ul {
-			margin: 0.4em 0 0 0;
+			margin: $navi-top-spacing 0 0 0;
 			padding: 0;
 			list-style: none;
 			
@@ -68,12 +79,12 @@ header {
 					&:hover,
 					&:active{
 						color: $main-color;
-						}
-					}
+						} 
+					} /* // a */
 				} /* // li */
 			} /* // ul */
-		}
-	}
+		} /* // .navi */
+	} /* // header */
 	
 a {
 	color: $main-color;
@@ -87,21 +98,23 @@ a {
 article {
 	margin-bottom: $space-between-posts*1em;
 	padding: 0;
-	border-bottom: 1px solid $light-gray;
-	font-family: $post-font;
 	font-size: $post-font-size;
 	line-height: $post-font-line-height;
-	text-align: justify;
+	text-align: $post-align;
 	
 	.content {
-		border-bottom: 1px solid $light-gray;
+		padding-bottom: $post-content-bottom-space;
 		}
 		
-	time {
-		font-size: $date-font-size;
+	footer {
+		padding: $tags-spacing 0;
+		border-bottom: 1px solid $light-gray;
+		border-top: 1px solid $light-gray;
 		}
 		
 	h1, h2, h3 {
+		text-align: $subheadings-align;
+		
 		a {
 			color: $black;
 			
@@ -122,30 +135,27 @@ article {
 			font-weight: $post-title-font-weight;
 			font-style: $post-title-font-style;
 			line-height: $post-title-line-height;
+			text-align: $post-title-align;
+			}
+				
+		time {
+			font-size: $date-font-size;
+			font-style: $date-font-style;
 			}
 		}
 		
 	hr {
 		margin: $hr-spacing !important;
-		border: none;
 		height: 1px;
+		border: none;
 		color: $light-gray;
 		background-color: $light-gray;
 		}
 		
-	footer {
-		margin: $post-content-bottom-space 0 $tags-spacing 0;
-		}
-		
 	p {
 		.caption {
+			font-family: $caption-font-family;
 			font-size: $caption-font-size;
-			}
-			
-		.word1,
-		.word2,
-		.word3 {
-			font-variant: small-caps;
 			}
 			
 		img {
@@ -153,23 +163,17 @@ article {
 			padding: 4px;
 			@include box-shadow(0 0 0px 1px $gray);
 			}
+			
+		.word1,
+		.word2,
+		.word3 {
+			font-size: $post-first-words-font-size;
+			font-variant: $post-first-words-font-variant;
+			}
 		}
 	}
 	
-code {
-	margin: $code-margin 0;
-	padding: $code-padding;
-	font-family: $code-font-family;
-	font-size: $code-font-size;
-	}
-	
-p > code {
-	border: 1px solid $light-gray;
-	@include border-radius(4px);
-	background-color: $code-background-color;
-	white-space: nowrap;
-	}
-
+/* Code blocks */
 pre {
 	position: relative;
 	border: 1px solid $light-gray;
@@ -186,6 +190,21 @@ pre {
 		}
 	}
 	
+code {
+	margin: $code-margin 0;
+	padding: $code-padding;
+	font-family: $code-font-family;
+	font-size: $code-font-size;
+	}
+	
+/* Inline code */
+p > code {
+	border: 1px solid $light-gray;
+	@include border-radius(4px);
+	background-color: $code-background-color;
+	white-space: nowrap;
+	}
+
 .pagination {
 	position: relative;
 	margin: 5em 0;
@@ -220,6 +239,7 @@ pre {
 		}
 	}
 	
+/* Archive and tags listings */
 .cat-year {
 	padding-top: $year-spacing-bottom;
 	font-family: $year-font-family;
@@ -227,21 +247,12 @@ pre {
 	}
 	
 .cat-month {
-	margin: 2em 0 0.5em 2em;
-	padding-bottom: $month-spacing-bottom;
+	margin: $month-indent 0 $month-spacing-bottom $month-indent;
 	font-family: $month-font-family;
 	font-size: $month-font-size;
 	}
 	
 .title-listing {
-	margin-left: 2em;
-	}
-	
-.wrap > footer {
-	margin-top: 2em;
-	padding: 2em 0;
-	border-top: 1px solid $light-gray;
-	text-align: center;
-	font-size: 0.8em;
+	margin-left: $month-indent;
 	}
 	

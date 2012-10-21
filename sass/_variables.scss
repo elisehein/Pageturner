@@ -7,6 +7,73 @@ $light-light-gray: #f8f8f8;
 $gray: #b0b0b0;
 $black: #333;
 
+/* Typography */
+$body-font: 'sorts-mill-goudy';
+$body-font-italic: 'sorts-mill-goudy-italic';
+$body-font-size: 1.1em;
+
+$blog-title-font: 'nevis';
+$blog-title-font-size: 2.3em;
+$blog-title-text-transform: uppercase;
+
+$navi-font: 'sorts-mill-goudy';
+$navi-font-size: 1.15em;
+
+$page-title-align: center;
+
+$post-font-size: 1.1em;
+$post-font-line-height: 1.7em;
+$post-align: justify;
+
+$post-first-words-font-variant: small-caps;
+$post-first-words-font-size: 1em;
+
+$post-title-font-size: 1.6em;
+$post-title-font-weight: normal;
+$post-title-font-style: normal;
+$post-title-line-height: 1.3em;
+$post-title-align: center;
+
+$date-font-size: 1em;
+$date-font-style: normal;
+
+$heading-font-size: 1.6em;
+$heading-font-weight: normal;
+$heading-font-style: normal;
+$heading-top-spacing: 2em;
+
+$subheading-font-size: 1.1em;
+$subheading-font-weight: bold;
+$subheading-font-style: normal;
+$subheading-top-spacing: 2em;
+
+$subheadings-align: left;
+
+$code-font-family: 'Cousine';
+$code-font-size: 0.75em;
+$code-padding: 0.4em;
+$code-margin: 0.4em;
+$code-border-radius: 3px;
+$code-border-color: $gray;
+$code-background-color: $white;
+
+$code-block-line-height: 1.8em;
+
+$caption-font-size: 0.9em;
+$caption-font-family: 'sorts-mill-goudy-italic';
+
+$paginator-font-family: 'sorts-mill-goudy';
+$paginator-font-size: 1em;
+
+/* On the category listing page */
+$year-font-family: 'nevis';
+$year-font-size: 1.3em;
+$year-spacing-bottom: 1.5em;
+$month-font-family: 'nevis';
+$month-font-size: 1em;
+$month-spacing-bottom: 0.5em;
+$month-indent: 2em;
+
 /* Layout */
 
 /* Width of the content area */
@@ -20,6 +87,7 @@ $top-line-weight: 8px;
 
 /* Space between header links (this will be in ems) */
 $navi-link-spacing: 0.8;     
+$navi-top-spacing: 0.4em;
 
 /* Space between the date and the post */
 $post-content-top-space: 3em;
@@ -31,66 +99,8 @@ $post-content-bottom-space: 2em;
 $space-between-posts: 8;
 
 /* Author tags top and bottom spacing */
-$tags-spacing: 2em;
+$tags-spacing: 1em;
 
 /* Space before and after a <hr> */
 $hr-spacing: 4em;
 
-/* Typography */
-$body-font: 'sorts-mill-goudy';
-$body-font-size: 1.1em;
-
-$blog-title-font: 'nevis';
-$blog-title-font-size: 2.3em;
-$blog-title-letter-spacing: 0.02em;
-$blog-title-text-transform: uppercase;
-
-$navi-font: 'sorts-mill-goudy';
-$navi-font-size: 1.15em;
-
-$post-font: 'sorts-mill-goudy';
-$post-font-size: 1.1em;
-$post-font-line-height: 1.7em;
-
-$post-first-words-font-variant: small-caps;
-$post-first-words-font-size: 1.1em;
-
-$post-title-font-size: 1.6em;
-$post-title-font-weight: normal;
-$post-title-font-style: normal;
-$post-title-line-height: 1.3em;
-
-$date-font-size: 1em;
-
-$heading-font-size: 1.6em;
-$heading-font-weight: normal;
-$heading-font-style: normal;
-$heading-top-spacing: 2em;
-
-$subheading-font-size: 1.1em;
-$subheading-font-weight: bold;
-$subheading-font-style: normal;
-$subheading-top-spacing: 2em;
-
-$code-font-family: "Cousine";
-$code-font-size: 0.75em;
-$code-padding: 0.4em;
-$code-margin: 0.4em;
-$code-border-radius: 3px;
-$code-border-color: $gray;
-$code-background-color: $white;
-
-$code-block-line-height: 1.8em;
-
-$caption-font-size: 0.9em;
-
-$paginator-font-family: 'sorts-mill-goudy';
-$paginator-font-size: 1em;
-
-/* On the category listing page */
-$year-font-family: 'nevis';
-$year-font-size: 1.3em;
-$year-spacing-bottom: 1.5em;
-$month-font-family: 'nevis';
-$month-font-size: 1em;
-$month-spacing-bottom: 0em;
