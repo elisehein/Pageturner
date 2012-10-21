@@ -1,6 +1,7 @@
 @import "bourbon/bourbon";
 @import "typography";
 @import "variables";
+@import "responsive";
 
 body {
 	margin: 0;
@@ -9,6 +10,10 @@ body {
 	font-family: $body-font;
 	font-size: $body-font-size;
 	color: $black;
+	
+	@media only screen and (max-width: 1000px) {
+		font-size: 0.9em;
+		}
 	}
 	
 em {
@@ -34,6 +39,10 @@ h2 {
 .wrap {
 	margin: 0 auto;
 	width: $content-width;
+	
+	@media only screen and (min-width: 0px) and (max-width: 1200px) {
+		width: 90%;
+		}
 	
 	/* blog footer */
 	& > footer {
@@ -180,6 +189,7 @@ pre {
 	@include border-radius(4px);
 	line-height: $code-block-line-height;
 	background-color: $code-background-color;
+	overflow: hidden;
 	
 	.clip-btn {
 		position: absolute;
@@ -188,6 +198,10 @@ pre {
 		font-size: 0.8em;
 		text-decoration: underline;
 		}
+		
+		@media only screen and (max-width: 1000) {
+			display: none;
+			}
 	}
 	
 code {
@@ -195,6 +209,7 @@ code {
 	padding: $code-padding;
 	font-family: $code-font-family;
 	font-size: $code-font-size;
+	
 	}
 	
 /* Inline code */

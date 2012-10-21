@@ -1,0 +1,22 @@
+/* Respond to different screen sizes and media types 
+ * Adapted from http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32 */
+@mixin respond-to($device) {
+	
+	@if $device == phones {
+		@media only screen and (min-width: 0px) 
+											 and (max-width: 400px) { 
+			@content; 
+			}
+		}
+	@else if $device == tablets {
+		@media only screen and (min-width: 400px) 
+											 and (max-width: 1200px) { 
+			@content; 
+			}
+		}
+	@else if $device == desktops {
+		@media only screen and (min-width: 1200px) {
+			@content;
+			}
+		}
+	}
