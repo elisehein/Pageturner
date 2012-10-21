@@ -104,6 +104,11 @@ a {
 		}
 	}
 		
+blockquote {
+	font-family: $blockquote-font-family;
+	font-size: $blockquote-font-size;
+	}
+	
 article {
 	margin-bottom: $space-between-posts*1em;
 	padding: 0;
