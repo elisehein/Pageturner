@@ -55,3 +55,4 @@ work as well, but this theme does not include styling for any `{% codeblock
 	caused by the way rake compiles sass files. Using regular `@media`
 	queries instead until fixed.
 - No styling for Octopress codeblock and gist plugins yet
+- If you've enabled like buttons or disqus comments in your _config.yml, you will need to add relevant tags and styling
