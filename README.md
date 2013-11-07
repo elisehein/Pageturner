@@ -15,7 +15,8 @@ See http://fivetonine.eu
 ## Install
 
 	# cd octopress/.themes
-	# git clone https://github.com/elisehein/Pageturner.git
+	# git clone https://github.com/elisehein/Pageturner.git .themes/Pageturner
+	# rake install ['Pageturner']
 	# rake install\[Pageturner\]
 	# rake generate
 
