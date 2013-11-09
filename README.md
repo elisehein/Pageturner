@@ -14,10 +14,10 @@ See http://fivetonine.eu
 
 ## Install
 
-	# cd octopress/.themes
+From your Octopress root directory:
+
 	# git clone https://github.com/elisehein/Pageturner.git .themes/Pageturner
 	# rake install ['Pageturner']
-	# rake install\[Pageturner\]
 	# rake generate
 
 ## About
