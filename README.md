@@ -1,3 +1,5 @@
+*Note: This project is not actively maintained, but open to any pull requests*
+
 # A simple responsive Octopress theme
 
 There isn't a very wide choice of Octopress themes out there, so I decided
