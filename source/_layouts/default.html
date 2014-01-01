@@ -59,7 +59,7 @@
 			
 			// Add the image's title attribute as a caption
 			$('p:has(img)').append(function () {
-				return '<div class="caption">' + $('img', this).attr('title') + '</div>';
+				return '<div class="caption">' + ($('img', this).attr('title') || "") + '</div>';
 			});
 			
 			// Prettify code
